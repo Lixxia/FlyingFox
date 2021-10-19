@@ -3,33 +3,34 @@
 @import "icons/extension-icons.css";
 @import "window-controls/wc-without-tabline.css";
 @import "hide-tabline.css";
-@import "userChrome-static.css";
+@import "userChrome-hover.css";
+@import "hide-nav.css";
 
-:root {
-    --dark-0: #151d28;
-    --dark-base: #192330;
-    --dark-1: #233143;
-    --dark-2: #2a3b51;
-    --dark-3: #374e6c;
-    --dark-4: #3e5879;
-    --light-0: #d7dfea;
-    --light-base: #afc0d5;
-    --light-1: #a1b5ce;
-    --light-2: #94abc7;
-    --light-3: #87a0c0;
-    --light-4: #7996b9;
-    --accent: #63cdcf;
-    --yellow: #dbc074;
-    --green: #5cb8a7;
-    --red: #c94f6d;
-    --extension-icon-mask: grayscale(85%) invert(75%) sepia(8%) saturate(862%) hue-rotate(173deg) brightness(88%);
+:root { 
+    --dark-0: #262626;
+    --dark-base: #2c2c2c;
+    --dark-1: #3B3B3B;
+    --dark-2: #454545;
+    --dark-3: #595959;
+    --dark-4: #636363;
+    --light-0: #E7DECA;
+    --light-base: #d5c4a1;
+    --light-1: #CEBA92;
+    --light-2: #C8B184;
+    --light-3: #C1A876;
+    --light-4: #BB9F68;
+    --accent: #498486;
+    --yellow: #d49735;
+    --green: #96942d;
+    --red: #c82b2a;
+    --extension-icon-mask: grayscale(85%) invert(32%) sepia(9%) saturate(17%) hue-rotate(0deg) brightness(98%) contrast(82%);
 
     /* expanded width of the sidebar. 
     used for userChrome-static, and hover */
     --sidebar-width: 250px;
     /* initial width of the sidebar. 
     advised not to change since tst css relies on this value*/
-    --sidebar-collapsed-width: 60px;
+    --sidebar-collapsed-width: 40px;
 
     --dividers: 2px;
 
@@ -52,23 +53,22 @@
     /* set positive/smaller or negative value for right-space*/
 }
 
-:root[privatebrowsingmode="temporary"] {
-    --dark-0: #1c0e34;
-    --dark-base: #20103c;
-    --dark-1: #2f1d4e;
-    --dark-2: #38225d;
-    --dark-3: #4a2d7b;
-    --dark-4: #53338a;
-    --light-0: #cc6b9c;
-    --light-base: #b9407c;
-    --light-1: #ab3b73;
-    --light-2: #9c3569;
-    --light-3: #8d305e;
-    --light-4: #7d2b54;
-    --accent: #e9207e;
-    --yellow: #c9b336;
-    --green: #36c987;
-    --red: #c9365d;
-    --extension-icon-mask: grayscale(85%) invert(13%) sepia(80%) saturate(3107%) hue-rotate(256deg) brightness(84%)
-        contrast(93%);
+:root[privatebrowsingmode="temporary"]{ 
+    --dark-0: #262626;
+    --dark-base: #2c2c2c;
+    --dark-1: #3B3B3B;
+    --dark-2: #454545;
+    --dark-3: #595959;
+    --dark-4: #636363;
+    --light-0: #F7F1E3;
+    --light-base: #ead9b3;
+    --light-1: #F4D695;
+    --light-2: #F6D07E;
+    --light-3: #F9CB66;
+    --light-4: #FEC64D;
+    --accent: #498486;
+    --yellow: #d49735;
+    --green: #96942d;
+    --red: #c82b2a;
+    --extension-icon-mask: grayscale(85%) invert(32%) sepia(9%) saturate(17%) hue-rotate(0deg) brightness(98%) contrast(82%); 
 }

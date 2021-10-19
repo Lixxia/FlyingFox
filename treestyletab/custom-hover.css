@@ -1,58 +1,24 @@
-
 :root{ 
-  --dark-0: #151D28;
-  --dark-base: #192330;
-  --dark-1: #233143;
-  --dark-2: #2A3B51;
-  --dark-3: #374E6C;
-  --dark-4: #3E5879;
-  --light-0: #D7DFEA;
-  --light-base: #afc0d5;
-  --light-1: #A1B5CE;
-  --light-2: #94ABC7;
-  --light-3: #87A0C0;
-  --light-4: #7996B9;
-  --accent: #63cdcf;
-  --yellow: #dbc074;
-  --green: #5cb8a7;
-  --red: #c94f6d;
-  --extension-icon-mask: grayscale(85%) invert(75%) sepia(8%) saturate(862%) hue-rotate(173deg) brightness(88%);
+    --extension-icon-mask: sepia(50%) saturate(97%);
 }
 
 :root.incognito{ 
-  --dark-0: #1C0E34;
-  --dark-base: #20103c;
-  --dark-1: #2F1D4E;
-  --dark-2: #38225D;
-  --dark-3: #4A2D7B;
-  --dark-4: #53338A;
-  --light-0: #CC6B9C;
-  --light-base: #B9407C;
-  --light-1: #AB3B73;
-  --light-2: #9C3569;
-  --light-3: #8D305E;
-  --light-4: #7D2B54;
-  --accent: #e9207e;
-  --yellow: #C9B336;
-  --green: #36C987;
-  --red: #C9365D;
-  --extension-icon-mask: grayscale(85%) invert(13%) sepia(80%) saturate(3107%) hue-rotate(256deg) brightness(84%) contrast(93%);
+    --extension-icon-mask: sepia(50%) saturate(97%);
 }
-
 
 :root{
     --tab-border-radius: 7px; /* border radius of tabs */
     --animation-duration: 200ms; /* duration of different animations [0s: turn all animations off] */
-    --spacing: 14px; /* spacing between tabs. [<15px: compact tabs] */
+    --spacing: 12px; /* spacing between tabs. [<15px: compact tabs] */
     --distance-from-edge: 10px; /* distance between tabs, and left-right edges of sidebar*/
-    --hover-text-spacing: 0.2; /* should be left alone. with hover sidebar, if text is visible in collapsed status, increase this */
+    --hover-text-spacing: 0.3; /* should be left alone. with hover sidebar, if text is visible in collapsed status, increase this */
 
 
     --ease-in: cubic-bezier(0.32, 0, 0.67, 0);
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 
-    --collapsed-width: 60px;
+    --collapsed-width: 40px;
   
     --contextual-identity-color-blue: #63B3ED;
     --contextual-identity-color-orange: #F6AD55;
@@ -61,12 +27,9 @@
 }
 
 /************UNCUSTOMIZED CSS************/
-#tabbar-container #tabbar{
-   margin-bottom: 15px !important;
-}
 
 :root, #background{
-    background:  var(--dark-base) !important;
+    background:  var(--theme-colors-frame) !important;
 }
 
 #all-tabs{
@@ -88,7 +51,7 @@ tab-item.collapsed{
 }
 
 tab-item:not([data-level="0"]):not(.pinned){
-    border-left: dashed 2px var(--light-4) !important;
+    border-left: dashed 2px var(--theme-colors-popup_text) !important;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-top: calc(var(--spacing)/2);
@@ -105,33 +68,32 @@ tab-item tab-favicon{
 }
 
 tab-item .label {
-    color: var(--light-2) !important;
+    color: var(--theme-colors-popup_text) !important;
     padding-bottom: 2px;
 }
 
 tab-item .twisty:before{
-   background: var(--light-3) !important;
 }
 
 tab-item.active .label {
-    color: var(--light-0) !important;
+    color: var(--theme-colors-popup_text) !important;
 }
 
 tab-item.active {
-    background: var(--dark-3) !important;
+    background: var(--theme-colors-button_background_active) !important;
 }
 
 
 tab-item:not(.active).highlighted{
-    background: var(--dark-1) !important;
+    background: var(--theme-colors-popup_highlight) !important;
 }
 
 tab-item:not(active):hover {
-    background: var(--dark-1);
+    background: var(--theme-colors-popup_highlight);
 }
 
 tab-item:hover tab-closebox {
-    right: 10px;
+    right: 0px;
     opacity: 1;
 }
 
@@ -144,18 +106,17 @@ tab-item:not(pinned) tab-closebox {
     border-radius: 50%;
     padding-top: 2px;
     padding-left: 2px;
-    background: var(--light-4);
+    background: var(---theme-colors-popup_text);
     transition   : all var(--animation-duration) var(--ease-out);
 }
 
 .sound-button:after {
-    background: var(--light-3) !important;
     margin-right: 5px;
 }
 
 .counter{
-    color: var(--light-4) !important;
-    background: var(--dark-2) !important;
+    color: var(--theme-colors-popup_text) !important;
+    background: var(--theme-colors-popup_border) !important;
     border-radius: 7px;
     margin: 2px 4px 0px 0px;
     padding: 0 4px;
@@ -167,14 +128,18 @@ tab-item:not(pinned) tab-closebox {
 
 /********LEFT CONTENT TAB(hover)*************/
 
+:root.left #tabbar {  
+    margin-left: -5px;
+}
+
 :root.left tab-item{
     padding-left: 0px;
 }
 
 :root.left tab-item tab-favicon {
     order: 10 !important;
-    margin-right: calc(var(--collapsed-width)*0.25) !important;
-    transform: scale(120%) translateX(0px) !important;
+    margin-right: calc(var(--collapsed-width)*0.05) !important;
+    transform: scale(100%) translateX(0px) !important;
 }
 
 :root.left tab-item .sound-button:after {
@@ -189,7 +154,7 @@ tab-item:not(pinned) tab-closebox {
 }
 
 :root.left tab-item:not(.pinned):hover tab-favicon {
-    transform: scale(120%) translateX(-20px) !important;
+    transform: scale(100%) translateX(-20px) !important;
 }
 
 :root.left tab-item:not([data-child-ids]):hover .label {
@@ -209,7 +174,7 @@ tab-item:not(pinned) tab-closebox {
 .tab
     .favicon
     .favicon-default::before {
-    filter: var(--extension-icon-mask); /* change for light theme */
+    filter: var(--extension-icon-mask);
 }
 
 .tab[data-current-favicon-uri="undefined"]
@@ -221,30 +186,13 @@ tab-item:not(pinned) tab-closebox {
 
 /***********NEW TAB BUTTON**********/
 
-.newtab-button-box {
-    border: none !important;
-    margin: 0 50px;
-}
+.newtab-button-box { 
+  display: none;
+} 
 
-.newtab-button {
-    border: none !important;
-    border-radius: 8px;
-    padding: 8px 0 !important;
-    margin: 0 5px;
-}
-
-.newtab-button::before{
-   background: var(--light-3) !important;
-}
-
-.newtab-action-selector-anchor {
-    border: none !important;
-    margin-right: 10px;
-    margin-top: 3px;
-}
-
-.newtab-button:hover {
-    background: var(--dark-1);
+#tabbar { 
+  overflow-y: scroll;
+  bottom: 0px !important; /* Eliminate dead space on bottom */
 }
 
 /**********PINNED TAB***************/
@@ -295,6 +243,6 @@ tab-item.active.contextual-identity-firefox-container-4 {
 /***********************************/
 
 #all-tabs {
+    margin-top: -15px !important;
     border: none !important;
 }
-

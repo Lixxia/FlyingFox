@@ -181,7 +181,7 @@
 
 #urlbar[focused],
 #searchbar[focused] {
-    border: 2px solid var(--toolbar-field-focus-border-color) !important;
+    /* border: 2px solid var(--toolbar-field-focus-border-color) !important; */
     padding: 0 !important;
     margin: 0 !important;
 }
@@ -229,6 +229,7 @@
 }
 
 #urlbar-input {
+    text-align: center !important;
     width: 100% !important;
 }
 
@@ -523,6 +524,10 @@
     display: none !important;
 }
 
+#star-button {
+    margin-right: 20px !important;
+}
+
 #userContext-icons {
     flex-direction: row !important;
     align-items: center !important;
@@ -647,6 +652,11 @@
 #tracking-protection-icon-box[hasException=""] #tracking-protection-icon {
     fill: var(--red) !important;
 }
+
+.urlbar-icon {
+    transform: scale(1.50) translateX(-5px) translateY(-1px) !important;
+}
+
 #pageActionButton {
     list-style-image: url(page-action.svg) !important;
     fill: var(--lwt-toolbarbutton-icon-fill) !important;
@@ -705,4 +715,10 @@
     #identity-icon-labels {
         padding-inline-end: 0.5px !important;
     }
+}
+
+#urlbar ::-moz-selection,
+.searchbar-textbox ::-moz-selection {
+    background-color: var(--dark-1)!important;
+    color: var(--light-base) !important;
 }

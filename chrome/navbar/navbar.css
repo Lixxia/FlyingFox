@@ -130,3 +130,8 @@ toolbox[id="navigator-toolbox"]:hover #PersonalToolbar {
 toolbarbutton[class="bookmark-item"]:not(:hover) {
     opacity: 0.6 !important;
 }
+
+#star-button-box
+{
+    -moz-box-ordinal-group: 99 !important;
+}

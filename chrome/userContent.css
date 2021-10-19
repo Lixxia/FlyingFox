@@ -1,3 +1,5 @@
 *{
     scrollbar-width: 3px !important;
+    /* scrollbar-color: rgba(100,100,100,1) rgba(40,40,40,1) !important; */
+    scrollbar-color: rgba(40,40,40,0.5) rgba(40,40,40,0) !important;
 }
