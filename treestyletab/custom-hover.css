@@ -32,8 +32,8 @@
     background:  var(--theme-colors-frame) !important;
 }
 
-#all-tabs{
-   margin: 10px var(--distance-from-edge);
+tab-item {
+  margin: 10px var(--distance-from-edge);
 }
 
 tab-item:not(.collapsed) {
@@ -82,8 +82,9 @@ tab-item.active .label {
 
 tab-item.active {
     background: var(--theme-colors-button_background_active) !important;
+    padding-right: 5px;
+    margin-right: 5px !important;
 }
-
 
 tab-item:not(.active).highlighted{
     background: var(--theme-colors-popup_highlight) !important;
@@ -247,6 +248,7 @@ tab-item.active.contextual-identity-firefox-container-4 {
 /***********************************/
 
 #all-tabs {
+    /*margin: 10px var(--distance-from-edge);*/
     margin-top: -15px !important;
     border: none !important;
 }

@@ -34,7 +34,7 @@
 
     --urlbarView-popup-title: var(--light-1) !important;
 
-    --urlbarView-popup-url: var(--light-4) !important;
+    --urlbarView-popup-url: var(--accent) !important;
 
     /* toolbar_bottom_separator */
     --toolbox-border-bottom-color: var(--dark-base) !important; /* legacy */

@@ -6,7 +6,7 @@
 @import "userChrome-hover.css";
 @import "hide-nav.css";
 
-:root { 
+:root {
     --dark-0: #262626;
     --dark-base: #2c2c2c;
     --dark-1: #3B3B3B;
@@ -23,7 +23,8 @@
     --yellow: #d49735;
     --green: #96942d;
     --red: #c82b2a;
-    --extension-icon-mask: grayscale(85%) invert(32%) sepia(9%) saturate(17%) hue-rotate(0deg) brightness(98%) contrast(82%);
+    /* --extension-icon-mask: grayscale(85%) invert(32%) sepia(9%) saturate(17%) hue-rotate(0deg) brightness(98%) contrast(82%); */
+    --extension-icon-mask: sepia(100%) saturate(17%) hue-rotate(0deg) brightness(98%) contrast(82%);
 
     /* expanded width of the sidebar. 
     used for userChrome-static, and hover */
@@ -51,24 +52,4 @@
     /* right-space shifts rest of the navbar (forward,backward,urlbar,etc.) to the right */
     /* if you want to increase/decrease space between window-controls and navbars: */
     /* set positive/smaller or negative value for right-space*/
-}
-
-:root[privatebrowsingmode="temporary"]{ 
-    --dark-0: #262626;
-    --dark-base: #2c2c2c;
-    --dark-1: #3B3B3B;
-    --dark-2: #454545;
-    --dark-3: #595959;
-    --dark-4: #636363;
-    --light-0: #F7F1E3;
-    --light-base: #ead9b3;
-    --light-1: #F4D695;
-    --light-2: #F6D07E;
-    --light-3: #F9CB66;
-    --light-4: #FEC64D;
-    --accent: #498486;
-    --yellow: #d49735;
-    --green: #96942d;
-    --red: #c82b2a;
-    --extension-icon-mask: grayscale(85%) invert(32%) sepia(9%) saturate(17%) hue-rotate(0deg) brightness(98%) contrast(82%); 
 }
