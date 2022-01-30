@@ -1,0 +1,11 @@
+:root {
+    --contextual-identity-color-blue: #63B3ED;
+    --contextual-identity-color-orange: #F6AD55;
+    --contextual-identity-color-green: #68D391;
+    --contextual-identity-color-pink: #F687B3;
+    --light-color: rgb(213, 195, 161);
+    --dark-color: rgb(40, 40 ,40);
+    --dark-alt-color: rgb(76, 79, 82);
+    --highlight-color: rgb(69, 133, 136);
+    --highlight-text-color: rgb(213, 195, 161);
+}

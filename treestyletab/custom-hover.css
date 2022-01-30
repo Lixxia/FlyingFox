@@ -24,12 +24,17 @@
     --contextual-identity-color-orange: #F6AD55;
     --contextual-identity-color-green: #68D391;
     --contextual-identity-color-pink: #F687B3;
+    --light-color: #DADAE8;
+    --dark-color: #1E1E28;        
+    --dark-alt-color: #1A1826;
+    --highlight-color: #89DCEB;
+    --highlight-text-color: #1A1826;
 }
 
 /************UNCUSTOMIZED CSS************/
 
 :root, #background{
-    background:  var(--theme-colors-frame) !important;
+    background:  var(--dark-color) !important;
 }
 
 tab-item {
@@ -51,7 +56,7 @@ tab-item.collapsed{
 }
 
 tab-item:not([data-level="0"]):not(.pinned){
-    border-left: dashed 2px var(--theme-colors-popup_text) !important;
+    border-left: dashed 2px var(--light-color) !important;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-top: calc(var(--spacing)/2);
@@ -68,36 +73,36 @@ tab-item tab-favicon{
 }
 
 tab-item .label {
-    color: var(--theme-colors-popup_text) !important;
+    color: var(--light-color) !important;
     padding-bottom: 2px;
 }
 
 tab-item .twisty:before{
-  fill: var(--theme-colors-popup_text) !important;
+  fill: var(--light-color) !important;
 }
 
 tab-item.active .label {
-    color: var(--theme-colors-popup_text) !important;
+    color: var(--highlight-text-color) !important;
 }
 
 tab-item.active {
-    background: var(--theme-colors-button_background_active) !important;
+    background: var(--highlight-color) !important;
     padding-right: 5px;
     margin-right: 5px !important;
 }
 
 tab-item:not(.active).highlighted{
-    background: var(--theme-colors-popup_highlight) !important;
+    background: var(--dark-alt-color) !important;
 }
 
 tab-item:not(active):hover {
-    background: var(--theme-colors-popup_highlight);
+    background: var(--dark-alt-color);
 }
 
 tab-item:hover tab-closebox {
     right: 0px;
     transform: scale(80%) translateY(-1px);
-    background: var(--theme-colors-popup_text) !important;
+    background: var(--light-color) !important;
     opacity: 1;
 }
 
@@ -110,7 +115,7 @@ tab-item:not(pinned) tab-closebox {
     border-radius: 50%;
     padding-top: 2px;
     padding-left: 2px;
-    background: var(---theme-colors-popup_text);
+    background: var(--light-color);
     transition   : all var(--animation-duration) var(--ease-out);
 }
 
@@ -119,8 +124,8 @@ tab-item:not(pinned) tab-closebox {
 }
 
 .counter{
-    color: var(--theme-colors-popup_text) !important;
-    background: var(--theme-colors-popup_border) !important;
+    color: var(--light-color) !important;
+    background: var(--highlight-color) !important;
     border-radius: 7px;
     margin: 2px 4px 2px 0px;
     padding: 0 4px;
@@ -252,4 +257,3 @@ tab-item.active.contextual-identity-firefox-container-4 {
     margin-top: -15px !important;
     border: none !important;
 }
-

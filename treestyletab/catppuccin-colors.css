@@ -1,0 +1,11 @@
+:root {
+    --contextual-identity-color-blue: #63B3ED;
+    --contextual-identity-color-orange: #F6AD55;
+    --contextual-identity-color-green: #68D391;
+    --contextual-identity-color-pink: #F687B3;
+    --light-color: #DADAE8;
+    --dark-color: #1E1E28;
+    --dark-alt-color: #1A1826;
+    --highlight-color: #89DCEB;
+    --highlight-text-color: #1A1826;
+}
